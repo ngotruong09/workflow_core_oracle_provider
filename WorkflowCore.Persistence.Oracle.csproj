@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<AssemblyTitle>Workflow Core Oracle Persistence Provider</AssemblyTitle>
+		<VersionPrefix>3.8.1</VersionPrefix>
+		<Authors>Ngo Tuan Truong</Authors>
+		<TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
+		<AssemblyName>WorkflowCore.Persistence.Oracle</AssemblyName>
+		<PackageId>WorkflowCore.Persistence.Oracle</PackageId>
+		<PackageTags>workflow;.NET;Core;state machine;WorkflowCore</PackageTags>
+		<RepositoryType>git</RepositoryType>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<Description>Provides support to persist workflows running on Workflow Core to a Oracle database.</Description>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Oracle.EntityFrameworkCore" Version="7.21.9" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Oracle.EntityFrameworkCore" Version="5.21.90" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="WorkflowCore" Version="3.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="WorkflowCore" Version="3.8.1" />
+		<PackageReference Include="WorkflowCore.Persistence.EntityFramework" Version="3.8.1" />
+	</ItemGroup>
+
+</Project>
